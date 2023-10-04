@@ -1,0 +1,77 @@
+{% extends 'base/base.html' %}
+
+{% block Header %} {% endblock %}
+
+{% block Sidebar %} {% endblock %}
+
+{% block main %} {% endblock %}
+
+{% block study %} {% endblock %}
+
+{% block matery %}
+
+<main id="main" class="main">
+
+    <section class="section">
+        <div class="row align-items-top">
+            <div class="col-lg-7">
+
+
+                <!-- Card with header and footer -->
+                <div class="card">
+                    <div class="card-header">Matemáticas</div>
+                    <div class="card-body">
+                        <h5 class="card-title">Introducción</h5>
+                        La matemática2​ (del latín mathematĭca, y este del griego μαθηματικά, transliterado como mathēmatiká, derivado de μάθημα, tr. máthēma. 'conocimiento') es una ciencia formal que surgió del estudio de las figuras geométricas y la aritmética con números. No existe una definición generalmente aceptada de las matemáticas; hoy en día se suelen describir como una ciencia que utiliza la lógica para examinar las propiedades y los patrones de las estructuras abstractas creadas por las definiciones lógicas.
+                    </div>
+
+                    <div class="card-footer">
+
+                        <form method="post">
+
+                            {% csrf_token %}
+                            {{ form.as_p }}
+
+                            <!-- 
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="/static/assets/img/card.jpg" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card with an image on left</h5>
+                                            <p class="card-text">This is a wider card with supporting text below as a
+                                                natural
+                                                lead-in to additional content. This content is a little bit longer.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+
+                            <div class="row">
+                                <div class="col-md-8 col-md-offset-2">
+                                    <div class="form-group">
+                                        <button class="btn btn-primary " type="submit">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div><!-- End Card with header and footer -->
+
+
+
+            </div>
+
+        </div>
+    </section>
+
+</main><!-- End #main -->
+
+{% endblock %}
+
+{% block Footer %} {% endblock %}
